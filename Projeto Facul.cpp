@@ -1,30 +1,26 @@
-/*Descrição do Projeto 01:
-
+/*DescriÃ§Ã£o do Projeto 01:
 Utilizando os conceitos de vetor, implemente um algoritmo que:
  //TODOS QUE TIVEREM Asterisco* JA FORAM FEITOS.
- //ATENÇAO PRA FUNCAO DE CADA UM 
+ //ATENÃ‡AO PRA FUNCAO DE CADA UM 
  
-    inclua até 1000 usuários; ****
-    edite um usuário;//marcela(apoio do Daniel)
-    exclua um usuário;//duda(apoio alisson)
-    busque um usuário pelo email;//alisson
-    imprima todos os usuários cadastrados;//Daniel
-    faça backup dos usuários cadastrados;//Daniel e alisson
-    faça restauração dos dados;//Duda e Marcela
+    inclua atÃ© 1000 usuÃ¡rios; ****
+    edite um usuÃ¡rio;//marcela(apoio do Daniel)
+    exclua um usuÃ¡rio;//duda(apoio alisson)
+    busque um usuÃ¡rio pelo email;//alisson
+    imprima todos os usuÃ¡rios cadastrados;//Daniel
+    faÃ§a backup dos usuÃ¡rios cadastrados;//Daniel e alisson
+    faÃ§a restauraÃ§Ã£o dos dados;//Duda e Marcela
     
     Por ultimo faremos uma reuniao pra editar e melhorar esse codigo , antes da entrega .//Daniel, Alisson, Marcela, Duda.
-
-Dados do usuário:
-
-    Id (int) => preenchido automaticamente por números randômicos ****
+Dados do usuÃ¡rio:
+    Id (int) => preenchido automaticamente por nÃºmeros randÃ´micos ****
     Nome completo (string) ****
-    Email (string) => validação do campo: verificar se o caractere "@" aparece ****
-    Sexo (string) => validação do campo: aceitar somente as palavras Feminino, Masculino e Não declarar****
-    Endereço (string) ****
-    Altura (double) => validação do campo: aceitar valores entre 1 e 2 ****
+    Email (string) => validaÃ§Ã£o do campo: verificar se o caractere "@" aparece ****
+    Sexo (string) => validaÃ§Ã£o do campo: aceitar somente as palavras Feminino, Masculino e NÃ£o declarar****
+    EndereÃ§o (string) ****
+    Altura (double) => validaÃ§Ã£o do campo: aceitar valores entre 1 e 2 ****
     Vacina (tomou a vacina? boolean) -> usou int ****
-
-Duas equipes serão sorteadas para realizar a apresentação do projeto, tendo 15 min para cada apresentação.*/
+Duas equipes serÃ£o sorteadas para realizar a apresentaÃ§Ã£o do projeto, tendo 15 min para cada apresentaÃ§Ã£o.*/
 
 #include <stdio.h>
 #include <string.h>
@@ -42,7 +38,7 @@ int main (){
  	
  	for(i = 0; i < 1000; i++){
  		int continua;	
-		printf("Deseja inserir um usuário  1 ou 0?");
+		printf("Deseja inserir um usuÃ¡rio  1 ou 0?");
 		fflush(stdin);
 		scanf("%d", &continua);
 		 
@@ -84,14 +80,14 @@ int main (){
 		}
 		
 		//SEXO
-		printf("Me o sexo (Feminino, Masculino e Não declarar):");
+		printf("Me o sexo (Feminino, Masculino e NÃ£o declarar):");
 	 	fflush(stdin);
 	 	fgets(sexo[i],50,stdin);
 		
 		if(strcmp(sexo[i], "Feminino") == 0 && strcmp(sexo[i], "Masculino") == 0 && strcmp(sexo[i], "Feminino") == 0){
 			printf("Sexo invalido\n");
 			
-			printf("Me o sexo (Feminino, Masculino e Não declarar):");
+			printf("Me o sexo (Feminino, Masculino e NÃ£o declarar):");
 	 		fflush(stdin);
 	 		fgets(sexo[i],50,stdin);
 		}else{
@@ -113,7 +109,7 @@ int main (){
 	 	printf("%.2lf", altura[i]);
 	 	
 	 	if(altura[i] > 1.00 && altura[i] < 2.00){
-			printf("Tá valido\n"); 		
+			printf("TÃ¡ valido\n"); 		
 		 }
 		 else{
 		 	printf("Altura invalida\n");
@@ -131,14 +127,14 @@ int main (){
 		 printf("%i");
 	}
 	
-	int deditar;
-	printf("Deseja editar algum usuário 1 ou 0? ");
+	int editar;
+	printf("Deseja editar algum usuÃ¡rio 1 ou 0? ");
 	fflush(stdin);
-	scanf("%d", &deditar);//editar
+	scanf("%d", &editar);//editar
 	
 	if(editar >= 1){
 		int index;
-		printf("Digite o index que você deseja editar: ");
+		printf("Digite o index que vocÃª deseja editar: ");
 		fflush(stdin);
 		scanf("%d", &index); 
 		
